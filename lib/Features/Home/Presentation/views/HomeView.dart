@@ -12,14 +12,20 @@ class Homeview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: appcolors.BackGround,
-      body: const Column(
-        children: [
-          CustomAppBar(),
-          SizedBox(
-            height: 14,
-          ),
-          HomeViewBody(),
-        ],
+      body: ListView.builder(
+        padding: EdgeInsets.all(0),
+        itemCount: 1,
+        itemBuilder: (context, index) {
+          return const Column(
+          children: [
+            CustomAppBar(),
+            SizedBox(
+              height: 14,
+            ),
+            HomeViewBody(),
+          ],
+        );
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
