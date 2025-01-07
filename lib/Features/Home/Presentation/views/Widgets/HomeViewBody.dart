@@ -1,4 +1,4 @@
-import 'package:education_app_ui/Features/Home/Presentation/views/Widgets/CoursesCard.dart';
+import 'package:education_app_ui/Features/Home/Presentation/views/CoursesView.dart';
 import 'package:education_app_ui/Features/Home/Presentation/views/Widgets/CoursesListView.dart';
 import 'package:education_app_ui/Features/Home/Presentation/views/Widgets/CustomGridView.dart';
 import 'package:education_app_ui/color.dart';
@@ -43,7 +43,7 @@ class HomeViewBody extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const Row(
+           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
@@ -53,17 +53,24 @@ class HomeViewBody extends StatelessWidget {
                     fontSize: 20,
                     color: appcolors.secondary),
               ),
-              Text(
-                'See All',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: appcolors.primary),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Coursesview() ;
+                  },));
+                },
+                child: Text(
+                  'See All',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: appcolors.primary),
+                ),
               )
             ],
           ),
           
-          CoursesListView()
+          CoursesListView(Axis.horizontal,250,double.infinity)
         ],
       ),
     );

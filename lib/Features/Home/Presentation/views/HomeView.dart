@@ -1,4 +1,4 @@
-
+import 'package:education_app_ui/Features/Home/Presentation/views/CoursesView.dart';
 import 'package:education_app_ui/color.dart';
 import 'package:flutter/material.dart';
 
@@ -17,14 +17,14 @@ class Homeview extends StatelessWidget {
         itemCount: 1,
         itemBuilder: (context, index) {
           return const Column(
-          children: [
-            CustomAppBar(),
-            SizedBox(
-              height: 14,
-            ),
-            HomeViewBody(),
-          ],
-        );
+            children: [
+              CustomAppBar(),
+              SizedBox(
+                height: 14,
+              ),
+              HomeViewBody(),
+            ],
+          );
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -33,9 +33,19 @@ class Homeview extends StatelessWidget {
           selectedItemColor: appcolors.primary,
           currentIndex: 0,
           backgroundColor: Colors.white70,
-          items: const [
+          items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.file_copy), label: ''),
+            BottomNavigationBarItem(
+                icon: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Coursesview(),
+                          ));
+                    },
+                    child: Icon(Icons.file_copy)),
+                label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.leaderboard), label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: '')
           ]),

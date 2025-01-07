@@ -1,3 +1,4 @@
+import 'package:education_app_ui/color.dart';
 import 'package:flutter/material.dart';
 
 class Coursedetailsview extends StatelessWidget {
@@ -5,6 +6,10 @@ class Coursedetailsview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return  Scaffold(
+      appBar: AppBar(
+        backgroundColor: appcolors.BackGround,
+      ),
+    );
   }
 }
