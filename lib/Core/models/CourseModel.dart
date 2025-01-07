@@ -6,13 +6,14 @@ class Coursemodel {
   String Title;
   String Rating;
   String description;
+  String price;
 
   Coursemodel(
       {required this.image,
       required this.color,
       required this.Title,
       required this.Rating,
-      required this.description});
+      required this.description,required this.price});
 
 
       factory Coursemodel.fromMap(Map<String, dynamic> map) {
@@ -22,6 +23,7 @@ class Coursemodel {
       Title: map['Title'] as String,
       Rating: map['Rating'] as String,
       description: map['Description'] as String,
+      price: map['price']as String,
     );
   }
 }

@@ -11,7 +11,7 @@ class CoursesCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context,MaterialPageRoute(builder: (context) {
-          return Coursedetailsview();
+          return Coursedetailsview(course);
         },) );
       },
       child: Container(

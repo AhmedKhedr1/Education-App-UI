@@ -10,6 +10,7 @@ class Data {
       'Rating': '8.0',
       'Description':
           'A comprehensive course on Flutter, covering UI design, state management, and building mobile applications for Android and iOS.'
+       ,'price':'\$ 200' 
     },
     {
       'image': 'assets/image2.png',
@@ -18,7 +19,7 @@ class Data {
       'Rating': '7.0',
       'Description':
           'Learn the basics of web design including HTML, CSS, and JavaScript to create visually appealing and responsive websites.'
-    },
+    ,'price':'\$ 150' },
     {
       'image': 'assets/image3.png',
       'color': Colors.orangeAccent,
@@ -26,15 +27,15 @@ class Data {
       'Rating': '8.0',
       'Description':
           'Master the .NET framework, C#, and ASP.NET to build robust and scalable web applications and services.'
-    },
+    ,'price':'\$ 200' },
     {
       'image': 'assets/image4.png',
       'color': Colors.green,
-      'Title': 'CS50: Introduction to Computer Science',
+      'Title': 'CS50: Intro to CS',
       'Rating': '9.0',
       'Description':
           'An introductory course to computer science, exploring algorithms, data structures, software development, and computer systems.'
-    },
+    ,'price':'\$ 200' },
     {
       'image': 'assets/web design.png',
       'color': Colors.purple,
@@ -42,7 +43,7 @@ class Data {
       'Rating': '8.0',
       'Description':
           'A deep dive into essential data structures and algorithms to enhance your problem-solving skills and understanding of computer science fundamentals.'
-    }
+    ,'price':'\$ 250' }
   ];
 
   List<Coursemodel> GetCourse() {

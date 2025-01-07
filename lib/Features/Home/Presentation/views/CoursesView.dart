@@ -8,25 +8,28 @@ class Coursesview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: appcolors.BackGround,
+      appBar: AppBar(
         backgroundColor: appcolors.BackGround,
-        appBar: AppBar(
-          backgroundColor: appcolors.BackGround,
-          automaticallyImplyLeading: true,
-          title: Text(
-            'Courses',
-            style: TextStyle(fontWeight: FontWeight.w600),
-          ),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 16),
-              child: Icon(
-                Icons.shopping_cart_checkout_rounded,
-                color: appcolors.primary,
-                size: 32,
-              ),
-            )
-          ],
+        automaticallyImplyLeading: true,
+        title: Text(
+          'Courses',
+          style: TextStyle(fontWeight: FontWeight.w600),
         ),
-        body: Center(child: CoursesListView(Axis.vertical, 800, 320)));
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: Icon(
+              Icons.shopping_cart_checkout_rounded,
+              color: appcolors.primary,
+              size: 32,
+            ),
+          )
+        ],
+      ),
+      body: Center(
+        child: CoursesListView(Axis.vertical, 800, 370),
+      ),
+    );
   }
 }
